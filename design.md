@@ -4,7 +4,7 @@ Source: authored from the owner's professional redesign brief.
 
 ## Character
 
-Swiss editorial design. White and neutral surfaces, a single blue accent, Helvetica throughout, generous but purposeful spacing, asymmetric columns and fine rules. Project evidence provides the imagery. No stock portraits or invented app screens.
+Swiss editorial design, extended with dark mode at the owner's request. Light mode uses white and neutral surfaces; dark mode uses charcoal surfaces with a lighter blue accent. Both retain Helvetica, purposeful spacing, asymmetric columns and fine rules. Project evidence provides the imagery. No stock portraits or invented app screens.
 
 ## Build mandate
 
@@ -17,6 +17,8 @@ Make Daniel's engineering work the visual center. A large left aligned introduct
 ## Responsive behavior
 
 The header wraps without a menu. Hero, projects and section grids become a single column below the tablet breakpoint. At 320px, actions and long contact text wrap. Preview images retain their aspect ratio. Native disclosures show engineering notes on demand.
+
+The theme toggle stays beside the identity on tablet and mobile, with navigation on the next row. Its text label is visually hidden on small phones, while the accessible name and 44px touch target remain. Device preference supplies the initial theme; a selection overrides it and is remembered when browser storage is available. Print output uses the light palette.
 
 ## Do and avoid
 

@@ -15,6 +15,7 @@ class PortfolioParser(HTMLParser):
         self.ids = []
         self.links = []
         self.images = []
+        self.scripts = []
         self.metadata = {}
         self.canonical = None
         self.h1_count = 0
@@ -27,6 +28,8 @@ class PortfolioParser(HTMLParser):
             self.links.append(attrs.get("href", ""))
         if tag == "img":
             self.images.append(attrs)
+        if tag == "script" and "src" in attrs:
+            self.scripts.append(attrs["src"])
         if tag == "meta":
             self.metadata[attrs.get("name", attrs.get("property"))] = attrs.get("content", "")
         if tag == "link" and attrs.get("rel") == "canonical":
@@ -46,7 +49,7 @@ def main():
     if page.canonical != PUBLIC:
         errors.append("Canonical URL changed")
 
-    for link in page.links:
+    for link in page.links + page.scripts:
         url = urlsplit(link)
         if not link:
             errors.append("Empty link")

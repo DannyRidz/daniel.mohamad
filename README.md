@@ -11,6 +11,15 @@ The live portfolio is published through GitHub Pages from the `main` branch.
 ![Desktop portfolio introduction and selected project index](assets/images/portfolio-preview.png)
 
 <details>
+<summary>Dark mode preview</summary>
+
+![Dark portfolio with the theme toggle enabled](assets/images/portfolio-dark.png)
+
+<img src="assets/images/portfolio-mobile-dark.png" width="390" height="844" alt="Dark mobile portfolio with the theme toggle in the header">
+
+</details>
+
+<details>
 <summary>Mobile preview</summary>
 
 <img src="assets/images/portfolio-mobile.png" width="390" height="844" alt="Mobile portfolio with wrapping navigation, professional introduction, project and contact actions, and a selected project index">
@@ -25,12 +34,13 @@ The live portfolio is published through GitHub Pages from the `main` branch.
 - Crop Health Assistant overview with team contribution, deployment and screening limitations.
 - Categorized skills grounded in project source and documentation.
 - Responsive layouts, always visible navigation, semantic landmarks, a keyboard skip link, visible focus, native disclosures and reduced motion support.
-- Optimized project images, explicit dimensions, lazy loading, no remote fonts and no JavaScript runtime.
+- Light and dark modes with a keyboard-accessible toggle, device preference detection and a remembered selection.
+- Optimized project images, explicit dimensions, lazy loading, no remote fonts and no framework dependencies.
 - Canonical URL, Open Graph and Twitter metadata, a 1200 × 630 social image and a local SVG favicon.
 
 ## Technology
 
-The portfolio uses **HTML and CSS**. A standard-library Python script checks local links and metadata. No package installation, frontend framework, API keys, build process or backend is needed to serve it. Technologies mentioned in project case studies belong to those separate applications.
+The portfolio uses **HTML, CSS and a small vanilla JavaScript theme script**. The theme is applied before the stylesheet loads to avoid flashing the wrong theme. If JavaScript is unavailable, CSS still follows the device theme and navigation, content and case study disclosures continue to work. A standard-library Python script checks local links and metadata. No package installation, frontend framework, API keys, build process or backend is needed to serve it. Technologies mentioned in project case studies belong to those separate applications.
 
 ## Local development
 
@@ -55,11 +65,13 @@ Then open `http://127.0.0.1:8000/daniel.mohamad/`.
 ```text
 index.html                 Content, navigation and metadata
 styles.css                 Design tokens, shared patterns and responsive styles
+theme.js                   Theme preference, persistence and toggle behavior
 design.md                  Visual direction and maintenance guidance
 .htmlvalidate.json         HTML validation conventions
 assets/images/             Project evidence, favicon and portfolio previews
 assets/documents/          Existing public resume
 scripts/check_site.py      Dependency-free link and metadata checks
+scripts/check_theme.cjs    Theme behavior checks using Node's standard library
 docs/audit.md              Original audit and prioritized plan
 docs/research.md           Claim sources, project selection and limitations
 docs/verification.md       Executed checks and remaining recommendations
@@ -72,6 +84,7 @@ Run the built-in checks:
 
 ```sh
 python3 scripts/check_site.py
+node scripts/check_theme.cjs
 git diff --check
 ```
 
@@ -82,6 +95,8 @@ npx --yes html-validate@9.7.1 index.html
 ```
 
 This optional command downloads a development tool; it adds no runtime dependency to the portfolio. CSS was also parsed and checked with CSS Tree. Browser verification covered desktop and mobile rendering, seven viewport widths, keyboard navigation, native disclosures, reduced motion, local HTTP asset responses and axe accessibility scans. See [executed checks and limitations](docs/verification.md) for exact results. Automated accessibility scans do not replace assistive-technology testing.
+
+The subsequent [dark mode implementation and checks](docs/dark-mode.md) cover remembered theme preferences, keyboard operation, contrast, responsive layouts and the refreshed previews.
 
 ## Deployment
 

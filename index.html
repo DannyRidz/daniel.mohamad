@@ -8,11 +8,10 @@
       content="Daniel Mohamad, a Brunei-based full-stack software and AI application developer. Explore Cartograph, RidzTalk, and the engineering behind practical applications."
     />
     <meta name="theme-color" content="#ffffff" />
+    <meta name="color-scheme" content="light dark" />
+    <script src="theme.js?v=1"></script>
     <title>Daniel Mohamad | Full-Stack &amp; AI Application Developer</title>
-    <link
-      rel="canonical"
-      href="https://dannyridz.github.io/daniel.mohamad/"
-    />
+    <link rel="canonical" href="https://dannyridz.github.io/daniel.mohamad/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_GB" />
     <meta
@@ -55,7 +54,7 @@
       content="Daniel Mohamad, a full-stack software and AI application developer based in Brunei."
     />
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=4" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -77,6 +76,18 @@
           </li>
         </ul>
       </nav>
+      <button
+        class="theme-toggle"
+        type="button"
+        aria-label="Dark mode"
+        aria-pressed="false"
+        hidden
+      >
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z" />
+        </svg>
+        <span>Dark mode</span>
+      </button>
     </header>
     <main id="main-content" tabindex="-1">
       <section class="hero container" id="home" aria-labelledby="hero-title">
@@ -105,7 +116,9 @@
                 <path d="M12 5v14m-6-6 6 6 6-6" /></svg
             ></a>
             <a class="button button-secondary" href="#contact">Contact me</a>
-            <a class="text-link" href="assets/documents/daniel-mohamad-cv.pdf?v=3"
+            <a
+              class="text-link"
+              href="assets/documents/daniel-mohamad-cv.pdf?v=3"
               >View resume <span class="file-type">PDF</span></a
             >
           </div>
@@ -565,7 +578,10 @@
       </section>
     </main>
     <footer class="site-footer container">
-      <p>&copy; 2026 Daniel Mohamad <span>Built with HTML &amp; CSS.</span></p>
+      <p>
+        &copy; 2026 Daniel Mohamad
+        <span>Built with HTML, CSS &amp; JavaScript.</span>
+      </p>
       <a href="#home"
         >Back to top
         <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
