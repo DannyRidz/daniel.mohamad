@@ -6,7 +6,7 @@ from urllib.parse import unquote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC = "https://dannyridz.github.io/Project-Building-Your-Personal-Website/"
+PUBLIC = "https://dannyridz.github.io/daniel.mohamad/"
 
 
 class PortfolioParser(HTMLParser):

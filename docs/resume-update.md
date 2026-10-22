@@ -38,4 +38,4 @@ The revised file is about 343KB, down from about 3.1MB. Only the portrait on the
 python scripts/build_resume.py --reference assets/documents/daniel-mohamad-cv.pdf
 ```
 
-The output goes to `output/pdf/daniel-mohamad-cv.pdf`. Review its renders and verify page three before replacing the public asset. The owner authorized publication after confirming the degree completion date.
+The output goes to `output/pdf/daniel-mohamad-cv.pdf`. Review its renders and verify page three before replacing the public asset. The owner authorized publication after confirming the degree completion date. The portfolio link was subsequently updated to `https://dannyridz.github.io/daniel.mohamad/` at the owner's request.

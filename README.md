@@ -2,9 +2,9 @@
 
 A static portfolio for Daniel Ridzwan Bin Mohamad, a Brunei-based full-stack software and AI application developer. It presents practical applications, the engineering decisions behind them, and direct routes to project evidence, a resume and contact details.
 
-[Live portfolio](https://dannyridz.github.io/Project-Building-Your-Personal-Website/)
+[Live portfolio](https://dannyridz.github.io/daniel.mohamad/)
 
-Local changes are not published automatically by this work. The live address reflects the last deployed revision until the owner approves publication.
+The live portfolio is published through GitHub Pages from the `main` branch.
 
 ## Preview
 
@@ -35,8 +35,8 @@ The portfolio uses **HTML and CSS**. A standard-library Python script checks loc
 ## Local development
 
 ```sh
-git clone https://github.com/DannyRidz/Project-Building-Your-Personal-Website.git
-cd Project-Building-Your-Personal-Website
+git clone https://github.com/DannyRidz/daniel.mohamad.git
+cd daniel.mohamad
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
@@ -48,7 +48,7 @@ To test the real GitHub Pages subpath, start the server from the parent director
 python3 -m http.server 8000 --bind 127.0.0.1 --directory ..
 ```
 
-Then open `http://127.0.0.1:8000/Project-Building-Your-Personal-Website/`.
+Then open `http://127.0.0.1:8000/daniel.mohamad/`.
 
 ## Project structure
 
@@ -85,9 +85,9 @@ This optional command downloads a development tool; it adds no runtime dependenc
 
 ## Deployment
 
-The site retains the existing GitHub Pages address and repository name. All page assets use relative paths, so they work under `/Project-Building-Your-Personal-Website/`. No deployment settings or workflows were changed.
+The repository was renamed to `daniel.mohamad` at the owner's request. All page assets use relative paths, so they work under `/daniel.mohamad/`. The GitHub Pages publishing workflow is unchanged.
 
-When publication is approved, use the repository's existing Pages source and publishing workflow. If it publishes from a branch, pushing to that configured branch may publish immediately. No push or deployment was performed during this upgrade.
+When publication is approved, use the repository's existing Pages source and publishing workflow. If it publishes from a branch, pushing to that configured branch may publish immediately. The owner approved publication of the portfolio and revised resume.
 
 For future updates, keep local links relative, update screenshot and social assets when the design changes, and bump the stylesheet query version when changing CSS. Recheck canonical and social URLs if the owner explicitly changes the public address.
 

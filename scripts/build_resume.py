@@ -110,7 +110,7 @@ def build(reference, output, font_dir):
     paragraph('Kuala Belait, Brunei Darussalam | +673 7148981', style_small, gap=1)
     paragraph('<link href="mailto:daniel.ridzwan.mohamad@gmail.com" color="#002fa7">daniel.ridzwan.mohamad@gmail.com</link>', style_small, gap=1)
     paragraph('<link href="https://github.com/DannyRidz" color="#002fa7">github.com/DannyRidz</link> | <link href="https://www.linkedin.com/in/danielmohamad/" color="#002fa7">linkedin.com/in/danielmohamad</link>', style_small, gap=1)
-    paragraph('<link href="https://dannyridz.github.io/Project-Building-Your-Personal-Website/" color="#002fa7">Portfolio: dannyridz.github.io/Project-Building-Your-Personal-Website</link>', style_small, gap=4)
+    paragraph('<link href="https://dannyridz.github.io/daniel.mohamad/" color="#002fa7">Portfolio: dannyridz.github.io/daniel.mohamad</link>', style_small, gap=4)
 
     section('Profile')
     paragraph('Brunei-based developer building full-stack web applications and AI-powered tools. Projects include a codebase explorer grounded in parsed dependencies, a published Android voice translator, and a coffee leaf screening application. Completed The Odin Project JavaScript curriculum. Previous engineering project delivery experience at Wood and NuQuest brings practical troubleshooting, documentation and coordination skills.')
