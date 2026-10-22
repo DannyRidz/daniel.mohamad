@@ -1,4 +1,6 @@
-# Verification record
+# Portfolio verification record
+
+These checks describe the portfolio redesign before the subsequent CV revision. See [resume revision checks](resume-update.md) for the current PDF.
 
 Executed 22 October 2026 against the local static site under its real repository subpath:
 `http://127.0.0.1:8000/Project-Building-Your-Personal-Website/`.

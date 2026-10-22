@@ -96,7 +96,7 @@ For future updates, keep local links relative, update screenshot and social asse
 - [Cartograph](https://github.com/DannyRidz/Cartograph): dependency map copied from the project's public showcase at commit `c96ec55512f980cea461e3edbefb6d058390424c`. It is an actual capture using saved parser output; there is no public live Cartograph service.
 - [RidzTalk](https://play.google.com/store/apps/details?id=com.polytalk.app): optimized derivative of the existing Google Play promotional screenshot. The [public showcase](https://github.com/DannyRidz/RidzTalk-showcase) describes inspected implementation; the published store binary may differ.
 - [Crop Health Assistant](https://github.com/DannyRidz/Crop-Health-Assistant): Daniel is credited with app development in team J2D. Screening results are tentative and broader agricultural validation remains pending.
-- The resume is preserved from the original repository. Portfolio previews and the typographic monogram were created for this redesign.
+- The resume's first two pages now match the portfolio, while page three retains the original recommendation letter unchanged. See [resume revision and checks](docs/resume-update.md). Portfolio previews and the typographic monogram were created for this redesign.
 
 [Research and claim evidence](docs/research.md) records the implementation sources and boundaries. No performance, revenue, user impact or model accuracy figures have been invented.
 
