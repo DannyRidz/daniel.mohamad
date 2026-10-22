@@ -166,10 +166,17 @@ img {
 }
 .theme-toggle:hover,
 .theme-toggle:active,
-.theme-toggle[aria-pressed="true"] {
+:root[data-theme="dark"] .theme-toggle {
   background: var(--surface);
   border-color: var(--accent);
   color: var(--accent);
+}
+.theme-icon-light,
+:root[data-theme="dark"] .theme-icon-dark {
+  display: none;
+}
+:root[data-theme="dark"] .theme-icon-light {
+  display: block;
 }
 .site-name {
   display: inline-flex;

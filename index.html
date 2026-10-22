@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#ffffff" />
     <meta name="color-scheme" content="light dark" />
-    <script src="theme.js?v=1"></script>
+    <script src="theme.js?v=2"></script>
     <title>Daniel Mohamad | Full-Stack &amp; AI Application Developer</title>
     <link rel="canonical" href="https://dannyridz.github.io/daniel.mohamad/" />
     <meta property="og:type" content="website" />
@@ -54,7 +54,7 @@
       content="Daniel Mohamad, a full-stack software and AI application developer based in Brunei."
     />
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=4" />
+    <link rel="stylesheet" href="styles.css?v=5" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -76,15 +76,23 @@
           </li>
         </ul>
       </nav>
-      <button
-        class="theme-toggle"
-        type="button"
-        aria-label="Dark mode"
-        aria-pressed="false"
-        hidden
-      >
-        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+      <button class="theme-toggle" type="button" aria-label="Dark mode" hidden>
+        <svg
+          class="icon theme-icon-dark"
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+        >
           <path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z" />
+        </svg>
+        <svg
+          class="icon theme-icon-light"
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+        >
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
+          />
         </svg>
         <span>Dark mode</span>
       </button>

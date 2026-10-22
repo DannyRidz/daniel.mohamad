@@ -8,11 +8,15 @@ const source = fs.readFileSync(path.join(__dirname, "../theme.js"), "utf8");
 function visit({ dark = false, saved = null, blocked = false } = {}) {
   const root = { dataset: {} };
   const events = {};
+  const label = { textContent: "Dark mode" };
   const button = {
     hidden: true,
     attrs: {},
     setAttribute(key, value) {
       this.attrs[key] = value;
+    },
+    querySelector() {
+      return label;
     },
     addEventListener(key, callback) {
       events[key] = callback;
@@ -60,6 +64,7 @@ function visit({ dark = false, saved = null, blocked = false } = {}) {
   return {
     root,
     button,
+    label,
     meta,
     stored: () => stored,
     load: () => loaded(),
@@ -85,10 +90,13 @@ assert.equal(
   "dark",
   "Follow system changes before an explicit choice",
 );
-assert.equal(automatic.button.attrs["aria-pressed"], "true");
+assert.equal(automatic.button.attrs["aria-label"], "Light mode");
+assert.equal(automatic.label.textContent, "Light mode");
 assert.equal(automatic.meta.content, "#111318");
 automatic.click();
 assert.equal(automatic.root.dataset.theme, "light");
+assert.equal(automatic.button.attrs["aria-label"], "Dark mode");
+assert.equal(automatic.label.textContent, "Dark mode");
 assert.equal(automatic.stored(), "light");
 automatic.system(true);
 assert.equal(
@@ -105,9 +113,11 @@ assert.equal(
 const savedDark = visit({ saved: "dark" });
 savedDark.load();
 assert.equal(savedDark.root.dataset.theme, "dark");
-assert.equal(savedDark.button.attrs["aria-pressed"], "true");
+assert.equal(savedDark.button.attrs["aria-label"], "Light mode");
+assert.equal(savedDark.label.textContent, "Light mode");
 savedDark.click();
-assert.equal(savedDark.button.attrs["aria-pressed"], "false");
+assert.equal(savedDark.button.attrs["aria-label"], "Dark mode");
+assert.equal(savedDark.label.textContent, "Dark mode");
 assert.equal(savedDark.meta.content, "#ffffff");
 
 assert.equal(visit({ dark: true }).root.dataset.theme, "dark");
@@ -125,5 +135,5 @@ assert.equal(
   "Toggle works even when storage reads and writes throw",
 );
 console.log(
-  "PASS: automatic theme, system changes, explicit preference, persistence, toggle state, browser color, invalid storage and blocked storage",
+  "PASS: automatic theme, system changes, explicit preference, persistence, action labels, browser color, invalid storage and blocked storage",
 );

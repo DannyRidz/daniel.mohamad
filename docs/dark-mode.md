@@ -4,7 +4,7 @@ Added on 22 October 2026 at the owner's request, extending the initial light-onl
 
 ## Behavior
 
-The header's Dark mode button is a native toggle button with an accessible name, pressed state and visible keyboard focus. It works with pointer input, Enter and Space. On small phones, the visible text is hidden while the accessible label and 44px target remain.
+The header's theme button names the action it will perform: Light mode in the dark theme, and Dark mode in the light theme. Its visible label, accessible name, tooltip and sun/moon icon update together. It is a native action button with visible keyboard focus, rather than a pressed-state toggle with a changing name. It works with pointer input, Enter and Space. On small phones, the visible text is hidden while the accessible label and 44px target remain.
 
 The initial theme follows the device preference. An explicit choice is stored as `portfolio-theme` in localStorage and applied on the next visit. Invalid values are ignored. If reading or writing storage throws, the button still changes the theme for the current visit. System theme changes are followed until a visitor chooses a theme.
 
@@ -13,7 +13,7 @@ The initial theme follows the device preference. An explicit choice is stored as
 ## Checks executed
 
 - `node --check theme.js`, `node scripts/check_theme.cjs`, `python3 scripts/check_site.py`, HTML validation and `git diff --check` passed.
-- The Node check exercises automatic selection, a saved override, reload state, OS changes, invalid preferences, blocked storage, pressed state and browser theme color.
+- The Node check exercises automatic selection, a saved override, reload state, OS changes, invalid preferences, blocked storage, visible and accessible action labels and browser theme color.
 - CSS Tree parsed the stylesheet and checked declaration grammar without errors.
 - Browser checks in Chrome confirmed pointer toggling, Enter and Space operation, and persistence across a real page reload.
 - Both themes had document width equal to viewport width at 320, 390, 768, 1024 and 1440px.

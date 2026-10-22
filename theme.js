@@ -19,7 +19,12 @@
     document
       .querySelector('meta[name="theme-color"]')
       ?.setAttribute("content", theme === "dark" ? "#111318" : "#ffffff");
-    button?.setAttribute("aria-pressed", String(theme === "dark"));
+    if (button) {
+      const action = theme === "dark" ? "Light mode" : "Dark mode";
+      button.setAttribute("aria-label", action);
+      button.setAttribute("title", action);
+      button.querySelector("span").textContent = action;
+    }
   }
 
   applyTheme();
